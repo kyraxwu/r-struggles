@@ -1,0 +1,17 @@
+---
+title: "Challenge-1"
+author: "Wu Xingyi"
+date: "2023-08-14"
+output:
+  pdf_document: default
+  html_document: default
+---
+## Markdown
+Hello my name is Xingyi, but I prefer to go by Kyra. I am a Y4 PPE Student doing a minor in IMD
+
+```{r, out.height= "400px",out.width= "300px",echo=FALSE,eval=TRUE,fig.cap="This is a photo of me!"} 
+knitr::include_graphics("pic.JPG") 
+```
+```{r, out.height= "300px",out.width= "400px",echo=FALSE,eval=TRUE,fig.cap="This is my layout"} 
+knitr::include_graphics("layout.png") 
+```

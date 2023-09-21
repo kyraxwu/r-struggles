@@ -1,0 +1,136 @@
+---
+title: "Quiz"
+author: "Wu Xingyi (Kyra)"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Questions
+<br>
+
+#### Question-7 Explain what is meant by local scope of a variable and illustrate it with an example code
+
+**Solutions:** 
+
+```{r, eval=T,echo=TRUE}
+# Initialize x
+x <- 5
+sprintf("The value assigned to x outside the function is %d",x)
+
+local <- function(x = 3) { 
+return(x+3)
+} 
+local()
+
+#Here, the value of x in the function is '3', and the code returns a value of "6" after adding "3" to x. 
+
+sprintf("The final value of x globally after reassigning it to a different value inside the function remains as %d", x) #However, as you can see, the global value of x does not change. 
+```
+<br>
+
+#### Question 8
+
+Imagine you have a dataset containing information about customers and their purchases. The dataset is called "customer_purchases", and includes columns for "CustomerID" (type:dbl), "CustomerName" (type:chr), "PurchaseDate" (type:Date), and "PurchaseAmount" (type:dbl). Write a line of code for each of the following tasks
+
+**Solutions:** 
+a. Filter the dataset to include only purchases whose amount is greater than or equal to 100
+```{r, eval=T,echo=TRUE}
+library(dplyr)
+filtered_data <- customer_purchases %>%
+filter(PurchaseAmount >= 100)
+```
+b. List the filtered data in the decreasing order of their amount
+
+```{r, eval=T,echo=TRUE}
+sorted_data <- filtered_data %>%
+arrange(desc(PurchaseAmount)) 
+
+sorted_data()
+```
+<br>
+
+#### Question-9 Download the titanic.csv Download titanic.csvfile into a folder on your computer, say “Quiz” inside your NM2207 folder, and
+**Solutions:** 
+a. Read the contents of the dataset (only code required)
+```{r, eval=T,echo=TRUE}
+library(readr)
+titanic <- read_csv("titanic.csv")
+```
+
+b. List all the passengers who survived in class 3 (only code required)
+```{r, eval=T,echo=TRUE}
+survived_class3 <- titanic %>% 
+  filter(Survived == 1, Pclass == 3)
+```
+
+
+c. Among those who survived in class 3, how many are female? (only code required)
+```{r, eval=T,echo=TRUE}
+female_survivors_class3 <- sum(survived_class3$Sex == "female")
+female_survivors_class3
+```
+d. What is the mean value of the age of survivors in class 3? (only code required)
+```{r, eval=T,echo=TRUE}
+mean_age_survivors_class3 <- mean(survived_class3$Age, na.rm = TRUE)
+mean_age_survivors_class3
+```
+e. List the survivors in class 3 in the decreasing order of their age (only code required)
+```{r, eval=T,echo=TRUE}
+survivors_class3_sorted <- survived_class3 %>% arrange(desc(Age))
+survivors_class3_sorted
+```
+f. Obtain a plot of age of the survivors in class 3 versus their passenger id (only code required)
+```{r, eval=T,echo=TRUE}
+library(ggplot2)
+ggplot(data=survived_class3, mapping=aes(x=Age,y=PassengerId)) + labs(x="Age",y="Passenger ID", title = "Age vs. Passenger ID") + geom_point(shape = 20, colour = "black", fill = "white", size = 1, stroke = 1)
+
+```
+
+#### Question-11 Evaluate the following code in RStudio and debug it. Explain what was wrong with the code, what the error-free code does and why the output of the function is different from carName?
+```{r, eval=T,echo=TRUE}
+carName <- 3
+
+print_car_name <- function(){
+
+names<-c("Volvo", "Mercedes", "Audi", "BMW")
+
+carName<-names[carName]
+
+return(carName)
+
+}
+
+cat("the name of the car you chose is", print_car_name(),", but the value of the variable carName is", carName)
+
+```
+
+
+**Solutions:** 
+
+```{r, eval=T,echo=TRUE}
+# Initialise a global variable, country_names, with the names of five countries of your choice
+countryz_names <- c("India", "United States of AAAAAAAAAA", "United Kingdom", "Europe")
+
+countryz_names
+
+country_name_length <- function(countryz_names) {
+  name_length <- nchar(countryz_names)
+  long_names <- countryz_names[name_length > 8]
+  longest_name <- max(long_names, na.rm = TRUE)
+  print(paste("The longest name is", longest_name, "and its length is", nchar(longest_name)))
+}
+
+
+country_name_length(countryz_names)
+print(name_length)
+```
+
+
+
+
+<br>

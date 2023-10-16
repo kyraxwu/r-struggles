@@ -173,7 +173,7 @@ table <-html_elements(webpage,"body")
 
 **calling APIs**
 
-```{r, eval= F,echo= T}
+```{r, eval= T,echo= T}
 #install.packages(c("httr","jsonlite"))
 library(jsonlite)
 library(httr)
@@ -182,14 +182,28 @@ library(httr)
 current_county_data_url <- "https://api.covidactnow.org/v2/counties.csv?apiKey=33382de96fd8441fb6c"
 raw_data <- GET(current_county_data_url)
 raw_data$status
-raw_data$content
+
+head(raw_data$content)
+```
+
+```{r, eval= T,echo= T}
+#install.packages(c("httr","jsonlite"))
+library(jsonlite)
+library(httr)
 
 # historic data
 historic_county_data_url <-
 "https://api.covidactnow.org/v2/counties.timeseries.csv?apiKey=33382de96fd8441fb6c1eca82b3bd4ec"
 raw_data <- GET(historic_county_data_url)
 raw_data$status
-raw_data$content
+
+head(raw_data$content)
+```
+
+```{r, eval= T,echo= T}
+#install.packages(c("httr","jsonlite"))
+library(jsonlite)
+library(httr)
 
 # individual location data
 individual_loc_data_url <-
@@ -197,6 +211,8 @@ individual_loc_data_url <-
 raw_data <- GET(individual_loc_data_url)
 raw_data$status
 raw_data$content
+
+head(raw_data$content)
 ```
 <br>
 

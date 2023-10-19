@@ -1,5 +1,5 @@
 ---
-title: "week 9 more like week i need some wine"
+title: "Week 9 Final Project Submission"
 author: "Wu Xingyi (Kyra)"
 date: "`r Sys.Date()`"
 output:
@@ -13,295 +13,63 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Questions
 <br>
-
-#### Code along!
-
-**lets go**
-
-```{r, eval= T,echo= T}
-library(tidyverse)
-tidydata <- tribble(
-~country,  ~year,  ~cases, ~population,
-"Afghanistan", 1999,    745,   19987071,
-"Afghanistan",  2000,   2666,   20595360,
-"Brazil", 1999,  37737,  172006362,
-"Brazil", 2000,  80488,  174504898,
-"China",1999, 212258, 1272915272,
-"China", 2000, 213766, 1280428583)
-
-tidydata
-```
-#### next up!
-
-**non tidy data**
-
-```{r, eval= T,echo= T}
-nontidydata <- tribble(
- ~country,~year,~rate,
- "Afghanistan",  1999, "745/19987071",
-"Afghanistan",  2000, "2666/20595360",
-"Brazil", 1999,  "37737/172006362",
-"Brazil", 2000,  "80488/174504898",
-"China",1999, "212258/1272915272",
-"China", 2000, "213766/1280428583")
-
-nontidydata
-```
-
 <br>
 
-#### next up!
-
-**non tidy data**
-
-```{r, eval= T,echo= T}
-nontidydata <- tribble(
- ~country,~year,~rate,
- "Afghanistan",  1999, "745/19987071",
-"Afghanistan",  2000, "2666/20595360",
-"Brazil", 1999,  "37737/172006362",
-"Brazil", 2000,  "80488/174504898",
-"China",1999, "212258/1272915272",
-"China", 2000, "213766/1280428583")
-
-nontidydata
-```
-
+### What Is The Topic That You Have Finalized?
 <br>
-
-#### tidying data
-
-**non tidy examples**
-
-```{r, eval= T,echo= T}
-tidieddata <- nontidydata %>%
-  separate(rate, into = c("cases",
-                          "population"),
-                            sep = "/")
-tidieddata
-```
-
 <br>
+The topic that I have decided on Bite for Change: Unpacking the Global Food Paradox. In a world where vast feasts and debilitating famines coexist, the global food paradox challenges us. We're awash in food production yet mired in hunger.  The paradox highlights the stark contrast between regions and communities with an overabundance of food, often leading to issues like overconsumption and food waste, while other areas suffer from chronic hunger and malnutrition. As I do not want the data to be too infinitely large, I am thinking of utilising continental data. I am also not too sure how much I can include, so I may do away with the environmental impact and animal welfare part if there is too much. 
 
-#### new tidied data
-
-**tidying more?**
-
-```{r, eval= T,echo= T}
-newtidieddata <- tidieddata %>%
-  pivot_longer(
-    cols = cases:population,
-    names_to = "measurement",
-    values_to = "value"
-  )
-newtidieddata
-```
-
+### What Are The Data Sources That You Have Curated So Far?
 <br>
-
-#### tidied data
-
-**example 2**
-
-```{r, eval= T,echo= T}
-df <- tribble(
-  ~id,  ~bp1, ~bp2,
-   "A",  100,  120,
-   "B",  140,  115,
-   "C",  120,  125
-) 
-df
-
-df %>%
-  pivot_longer(
-    cols = bp1:bp2,
-    names_to = "measurement",
-    values_to = "value"
-)
-```
-
 <br>
-
-#### tidied data
-
-**example 3**
-
-```{r, eval= T,echo= T}
-newtidieddata
-
-newtidieddata %>%
-  pivot_wider(names_from="measurement",
-              values_from="value")
-```
-
 <br>
+So far, I have managed to get the following data sources which I think are quite interesting to look at. Of course I do not think I will be using everything for the final project but the story I hope to tell would be along the lines of 
 
-#### tidied data
+# **Food Production**
 
-**example 4**
+### Per capita kilocalorie supply from all foods per day, 1961
+https://ourworldindata.org/explorers/global-food?time=earliest&facet=none&pickerSort=asc&Food=Total&Metric=Production&Per+Capita=false
 
-```{r, eval= T,echo= T}
-df <- tribble(
-  ~id, ~measurement, ~value,
-  "A",        "bp1",    100,
-  "B",        "bp1",    140,
-  "B",        "bp2",    115,
-  "A",        "bp2",    120,
-  "A",        "bp3",    105
-) 
-df
+# Environmental Impact
 
-df %>%
-  pivot_wider(
-    names_from = measurement,
-    values_from = value
-  )
-```
-<br>
+### Global emissions from food by life-cycle stage, Total GHGs
+https://ourworldindata.org/grapher/food-emissions-life-cycle
 
-#### scraping data from the web
+### Freshwater withdrawals per kilogram of food product
+https://ourworldindata.org/grapher/water-withdrawals-per-kg-poore
 
-**trying it out**
+### Carbon opportunity costs per kilogram of food
+https://ourworldindata.org/grapher/carbon-opportunity-costs-per-kilogram-of-food
 
-```{r, eval= T,echo= T}
-#install.packages("rvest")
-library(rvest)
-webpage <- read_html("https://books.toscrape.com/")
-table <-html_elements(webpage,"body")
-```
-<br>
+### Land use per kilogram of food product
+https://ourworldindata.org/grapher/land-use-per-kg-poore
 
-**calling APIs**
+### Greenhouse gas emissions per kilogram of food product
+https://ourworldindata.org/grapher/ghg-per-kg-poore
 
-```{r, eval= T,echo= T}
-#install.packages(c("httr","jsonlite"))
-library(jsonlite)
-library(httr)
+### Scarcity-weighted water use per kilogram of food product
+https://ourworldindata.org/grapher/scarcity-water-per-kg-poore
 
-# current data
-current_county_data_url <- "https://api.covidactnow.org/v2/counties.csv?apiKey=33382de96fd8441fb6c"
-raw_data <- GET(current_county_data_url)
-raw_data$status
+# Animal Welfare
+### Number of land animals slaughtered for meat per year, 1961 to 2021
+https://ourworldindata.org/explorers/animal-welfare?facet=none&country=OWID_WRL~USA~CHN~IND~BRA~GBR&Metric=Animals+slaughtered&Animal=All+land+animals+(total)&Per+person=false
 
-head(raw_data$content)
-```
+### Projected habitat loss for all species in 2050: Business-as-usual
+https://ourworldindata.org/explorers/habitat-loss
 
-```{r, eval= T,echo= T}
-#install.packages(c("httr","jsonlite"))
-library(jsonlite)
-library(httr)
+# World Hunger
+### Share of population that cannot afford a healthy diet, 2021
+https://ourworldindata.org/food-prices
 
-# historic data
-historic_county_data_url <-
-"https://api.covidactnow.org/v2/counties.timeseries.csv?apiKey=33382de96fd8441fb6c1eca82b3bd4ec"
-raw_data <- GET(historic_county_data_url)
-raw_data$status
+### Number of people that cannot afford a nutrient adequate diet, 2017
+https://ourworldindata.org/grapher/number-nutritional-diet-unaffordable
 
-head(raw_data$content)
-```
-
-```{r, eval= T,echo= T}
-#install.packages(c("httr","jsonlite"))
-library(jsonlite)
-library(httr)
-
-# individual location data
-individual_loc_data_url <-
-"https://api.covidactnow.org/v2/county/{49}.csv?apiKey=33382de96fd8441fb6c1eca82b3bd4ec"
-raw_data <- GET(individual_loc_data_url)
-raw_data$status
-raw_data$content
-
-head(raw_data$content)
-```
-<br>
-
-## now for the challenge
-
-<br>
-
-#### loading
-
-**the packages**
-
-```{r, eval= T,echo= T}
-library(tidyverse)
-```
-
-<br>
-
-**Pivot longer to arrange the names of the columns, wk1 to wk76 under a new variable/column week (Hint use: cols = starts_with("wk") as the argument to pivot_longer() )**
-
-```{r, eval= T,echo= T}
-billboard_long <- billboard %>%
-  pivot_longer(cols = starts_with("wk"), names_to = "week", values_to = "rank", values_drop_na = TRUE)
-
-billboard_long
-```
-
-<br>
+### Number of people that cannot afford a calorie sufficient diet, 2017
+https://ourworldindata.org/grapher/number-calorie-diet-unaffordable
 
 
-**Clean the "week" column to have only the week numbers (1 for wk1, 2 for wk2, etc.)**
 
-```{r, eval= T,echo= T}
-billboard_long <- billboard_long %>%
-  mutate(week = parse_number(week))
-
-billboard_long
-```
-
-<br>
-
-**Plot the rank along the y-axis and week along the x-axis, joining the data points with 'geom_line()'**
-
-```{r, eval= T,echo= T}
-ggplot(billboard_long, aes(x = week, y = rank)) +
-  geom_line() +
-  labs(title = "Billboard Chart Rank Over Weeks", x = "Week", y = "Rank")
-
-```
-
-<br>
-
-####  next question: loading
-
-**the packages**
-
-```{r, eval= T,echo= T}
-library(tidyverse)
-```
-
-<br>
-
-**Create as many columns as the distinct entries of the variable, measure_cd**
-
-```{r, eval= T,echo= T}
-pivot_wider(data = cms_patient_experience, 
-            names_from = measure_cd, 
-            values_from = prf_rate)
-```
-
-<br>
-
-**Create as many columns as the distinct entries of the variable, measure_cd, the values in the columns should correspond to the ones listed in the column, prf_rate**
-
-```{r, eval= T,echo= T}
-pivot_wider(data = cms_patient_experience, 
-            names_from = measure_cd, 
-            values_from = prf_rate)
-```
-
-<br>
-
-**The output doesn’t look quite right; we still seem to have multiple rows for each organization. That’s because, we also need to tell pivot_wider() which column or columns have values that uniquely identify each row; in this case those are the variables starting with "org"**
-
-```{r, eval= T,echo= T}
-pivot_wider(data = cms_patient_experience, 
-            names_from = measure_cd, 
-            values_from = prf_rate,
-            id_cols = starts_with("org"))
-```
 
 <br>
 

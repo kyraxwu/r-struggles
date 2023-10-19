@@ -1,0 +1,13 @@
+Week-9: Webpage + Diary Entry
+I. Document
+Answer The Following Questions In An R Markdown File,
+(1) What Is The Topic That You Have Finalized? (Answer In 1 Or 2 Sentences),
+(2) What Are The Data Sources That You Have Curated So Far? (Answer 1 Or 2 Sentences).
+Upon Completion, Knit The File And Upload The PDF In Week-9 Folder
+II. Webpage
+It Should Include,
+(1) Some Self-Introduction,
+(2) Week-1 To Week-9 Folders With Relevant Files - Challenges And Code-Alongs - Uploaded On Github And Link Provided On Webpage
+Submit The Link To Your Functional Webpage On Canvas
+III. Deadline
+Friday, 21:00hrs

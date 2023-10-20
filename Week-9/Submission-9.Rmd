@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ### What Is The Topic That You Have Finalized?
 <br>
 <br>
-The topic that I have decided on Bite for Change: Unpacking the Global Food Paradox. In a world where vast feasts and debilitating famines coexist, the global food paradox challenges us. We're awash in food production yet mired in hunger.  The paradox highlights the stark contrast between regions and communities with an overabundance of food, often leading to issues like overconsumption and food waste, while other areas suffer from chronic hunger and malnutrition. As I do not want the data to be too infinitely large, I am thinking of utilising continental data. I am also not too sure how much I can include, so I may do away with the environmental impact and animal welfare part if there is too much. 
+The topic that I have decided on is the Global Food Paradox. In a world where vast feasts and debilitating famines coexist, the global food paradox challenges us. We're awash in food production yet mired in hunger.  The paradox highlights the stark contrast between regions and communities with an overabundance of food, often leading to issues like over consumption and food waste, while other areas suffer from chronic hunger and malnutrition. As I do not want the data to be too infinitely large, I am thinking of utilising continental data. I am also not too sure how much I can include, so I may do away with the environmental impact and animal welfare part if there is too much. Also, I will definitely reduce the data size as I go along the project because I forsee that I would be trying to pick and choose the more relevant ones. 
 
 ### What Are The Data Sources That You Have Curated So Far?
 <br>

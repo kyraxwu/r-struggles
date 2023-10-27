@@ -65,7 +65,7 @@ Columns: Entity, Code,	Year,	Global Hunger Index
 Rows:  Continent Rows (Africa, Asia), United States, China, World
 https://ourworldindata.org/grapher/global-hunger-index
 
-### Challenges: Combining all the data set into 1 might be rather tough, and also for the first data set,  I want to be able to include the codes for the countries also so that is another challenge I forsee. Furthermore, trying to incorporate the Shiny applicaion to this has been rather challenging. 
+### Challenges: Combining all the data set into 1 might be rather tough, and also for the first data set,  I want to be able to include the codes for the countries also so that is another challenge I have. Combining the data based on their country codes is what I wanted to do as well but I have yet to figure out a way to do it so I will be doing more research into that.  Furthermore, trying to incorporate the Shiny applicaion to this has been rather challenging. 
 <br>
 
 

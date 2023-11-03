@@ -11,10 +11,32 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Questions
-<br>
-<br>
+# Week 9 Updated Topic Choice
 
+## What Is The Topic That You Have Finalized?
+The topic I have finalized for my project is an in-depth analysis of McDonald's meals, with a specific focus on their nutritional content, pricing, and the geographical distribution of McDonald's stores. This research aims to examine the nutritional value of popular menu items, such as Big Macs, and how their prices vary across different locations, providing insights into the relationship between menu offerings, nutrition, and cost-effectiveness.
+
+## What Are The Data Sources That You Have Curated So Far?
+
+### Nutrition Facts for McDonald's Menu
+<br>
+https://www.kaggle.com/datasets/mcdonalds/nutrition-facts
+
+### Big Mac Prices
+<br>
+https://www.kaggle.com/datasets/vittoriogiatti/bigmacprice/data
+
+### APAC-McDelivery-Menu-Logger
+<br>
+https://github.com/schmwong/APAC-McDelivery-Menu-Logger
+
+### Data-mcdonalds-nutrition
+<br>
+https://github.com/tsterbak/data-mcdonalds-nutritionfacts/blob/master/workbooks/pffy-data-mcdonalds-nutrition-facts.xlsx
+
+# Old Topic Choice
+<br>
+<br>
 ### What Is The Topic That You Have Finalized?
 <br>
 <br>
@@ -67,9 +89,6 @@ https://ourworldindata.org/grapher/number-nutritional-diet-unaffordable
 
 ### Number of people that cannot afford a calorie sufficient diet, 2017
 https://ourworldindata.org/grapher/number-calorie-diet-unaffordable
-
-
-
 
 <br>
 

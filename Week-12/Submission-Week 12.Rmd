@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 # Week 12 
 ## Challenges Face 
-The biggest challenge I faced this week was deploying my shiny app, and then trying to get the actual diagram to be interactive. Another is the fact that alot of the graphs I am trying to do, I do not really know how to implement them on Shiny. Furthermore, trying to string all the diagrams together to form one cohesive story was also very challenging. 
+The biggest challenge I faced this week was deploying my shiny app, and then trying to get the actual diagram to be interactive. Cleaning the data was also ridiculously hard. I want to make interactive maps but my country data is in the wrong format so I had to some how insert that kind of data as well... Another is the fact that alot of the graphs I am trying to do, I do not really know how to implement them on Shiny. Furthermore, trying to string all the diagrams together to form one cohesive story was also very challenging. 
 Making the final website pretty would be one of the last problems I forsee myself facing. 
 
 

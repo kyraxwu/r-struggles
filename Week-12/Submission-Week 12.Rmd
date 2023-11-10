@@ -1,0 +1,134 @@
+---
+title: "Week 10 Final Project Submission"
+author: "Wu Xingyi (Kyra)"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Week 12 
+## Challenges Face 
+The biggest challenge I faced this week was deploying my shiny app, and then trying to get the actual diagram to be interactive. Another is the fact that alot of the graphs I am trying to do, I do not really know how to implement them on Shiny. Furthermore, trying to string all the diagrams together to form one cohesive story was also very challenging. 
+Making the final website pretty would be one of the last problems I forsee myself facing. 
+
+
+
+# Week 11
+
+### List the visualizations that you are going to use in your project (Answer: What are the variables that you are going to plot? How will it answer your larger question?)
+
+Nutritional Value Comparison: I will create bar charts or radar charts to compare the nutritional content between different menu items 
+
+This visualization will help answer the question of how the average price of McDonald's menu items varies across different countries or regions. It can reveal insights into economic disparities, currency exchange rates, and local market factors that influence pricing. 
+
+Perhaps, another visualization that showcases the average price of McDonald's menu items across various countries, using a world map color-coded by price ranges to provide a quick overview of pricing disparities.
+
+I also plan to create a visualization that combines Big Mac prices with the number of people per outlet at McDonald's locations to identify the cheapest and most accessible places to eat. To do this, I'm considering two types of visualizations:
+*Geographical Scatterplot*: I'll use a scatterplot where the x-axis will show the number of people served by each outlet, and the y-axis will display the Big Mac price at that location. Each point's color will indicate the price range or accessibility level; for example, green for affordable and accessible and red for expensive and less accessible outlets. The size of the points could represent the popularity of each outlet.
+
+*Heatmap*: Another option is to create a heatmap that showcases regions or areas using different shades of color. The intensity of the color will reflect a combination of the Big Mac price and the number of people served per outlet. Darker shades on the map could signify cheaper and more accessible areas, while lighter shades could indicate pricier and less accessible locations.
+
+### How do you plan to make it interactive? (Answer: features of ggplot2/shiny/markdown do you plan to use to make the story interactive)
+
+Inputs: Use Shiny's input functions like selectInput(), sliderInput(), and textInput() to allow users to filter or customize the data displayed in the visualizations. For example, create a dropdown menu for selecting regions or a slider for choosing a price range.
+
+Tooltips: Integrate tooltips using Shiny's hoverText() or hoverInfo() to display additional information when users hover over data points in the visualizations. This can include specific price values, number of people served, or other relevant data.
+
+Linked Visualizations: [This one might be harder] Use Shiny's linking feature to establish interactivity between different plots. When a user interacts with one plot (e.g., selecting a region), it can update or filter data in other linked plots, providing a more holistic view of the data.
+
+ggiraph Package: I am also considering using the ggiraph package, which extends ggplot2 to create interactive graphics. This can include interactive bar charts, scatterplots, or other visualizations where users can click on elements for more information.
+
+### What concepts incorporated in your project were taught in the course and which ones were self-learnt? (Answer: Create a table with topics in one column and Weeks in the other to indicate which concept taught in which week is being used. Leave the entry of the Week column empty for self-learnt concepts)
+
+```{r}
+library(knitr)
+concepts_table <- data.frame(
+  Topics = c(
+    "Data Visualization with ggplot2",
+    "Interactive Web Applications with Shiny",
+    "Markdown for Document Creation",
+    "Data Cleaning and Pre-processing",
+    "Exploratory Data Analysis",
+    "Data Filtering and Transformation",
+    "Statistical Analysis and Plotting",
+    "Linking Visualizations in Shiny",
+    "Embedding Shiny Widgets in R Markdown"
+  ),
+  Weeks = c(
+    "Week 2 & 7",
+    "Week 2",
+    "Week 1",
+    "Week 4",
+    "Week 9 + Self Learned",
+    "Week 4 + Self Learned",
+    "Week 7",
+    "Self Learned",
+    "Announcements: Integration of Shiny dashboard with Quarto"
+  )
+)
+
+kable(concepts_table, format = "markdown")
+```
+
+
+# Week 10 
+### What is the question that you are going to answer? (Answer: One sentence that ends with a question mark that could act like the title of your data story)
+
+What should you order next at Mcdonalds? (Depending on Nutritional Value and Price)
+
+### Why is this an important question? (Answer: 3 sentences, each of which has some evidence, e.g., “According to the United Nations...” to justify why the question you have chosen is important)
+
+This question is important because McDonald's is one of the most popular fast food restaurants in the world, and many people are looking for ways to make healthier choices when eating there. Additionally, many people are on a budget, and want to get the most value for their money.
+
+**https://edition.cnn.com/2018/10/03/health/fast-food-consumption-cdc-study/index.html**
+
+A study by The Journal of Preventive Medicine and Hygiene (JPMH) found that people who eat fast food more than twice a week are more likely to be overweight or obese. Additionally, fast food is often high in unhealthy fats, sugar, and sodium.
+
+**https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6196377/**
+
+Lastly, cost is a crucial factor for many consumers, especially those on tight budgets. Understanding the trade-off between nutrition and price at a popular fast-food restaurant like McDonald's can help individuals and families make more informed decisions when dining out, contributing to financial well-being. Addressing this question can ultimately promote healthier eating habits while keeping affordability in mind.
+**https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=1593&context=etd**
+
+# **Data**
+### Which rows and columns of the dataset will be used to answer this question? (Answer: Actual names of the variables in the dataset that you plan to use).
+
+
+#### Big Mac (Ala Carte) in APAC (Row), Territory (Column) - https://github.com/schmwong/APAC-McDelivery-Menu-Logger
+
+#### Category, Item, Calories, Total Fat, Saturated Fat, Trans Fat - https://www.kaggle.com/datasets/mcdonalds/nutrition-facts
+
+#### Country, Number of Restaurants, Number of Restaurants per Million Population - https://openaxis.com/data/3740
+
+
+### Challenges: The sheer volume of data sets can be overwhelming. It becomes difficult to manage and analyze them comprehensively, especially if they are diverse in terms of format, structure, or content.With numerous data sets, I often find myself losing sight of the main narrative or research question. This can lead to a lack of clarity and direction in my analysis, making it challenging to derive meaningful insights. Furthermore, they might not naturally intersect or provide a clear link to build a cohesive narrative. Finding the connections between these sets can be time-consuming and demanding.
+
+
+# Week 9 
+
+## What Is The Topic That You Have Finalized?
+The topic I have finalized for my project is an in-depth analysis of McDonald's meals, with a specific focus on their nutritional content, pricing, and the geographical distribution of McDonald's stores. This research aims to examine the nutritional value of popular menu items, such as Big Macs, and how their prices vary across different locations, providing insights into the relationship between menu offerings, nutrition, and cost-effectiveness.
+
+## What Are The Data Sources That You Have Curated So Far?
+
+### Nutrition Facts for McDonald's Menu
+<br>
+https://www.kaggle.com/datasets/mcdonalds/nutrition-facts
+
+### Big Mac Prices
+<br>
+https://www.kaggle.com/datasets/vittoriogiatti/bigmacprice/data
+
+### APAC-McDelivery-Menu-Logger
+<br>
+https://github.com/schmwong/APAC-McDelivery-Menu-Logger
+
+### Data-mcdonalds-nutrition
+<br>
+https://github.com/tsterbak/data-mcdonalds-nutritionfacts/blob/master/workbooks/pffy-data-mcdonalds-nutrition-facts.xlsx
+
+
+

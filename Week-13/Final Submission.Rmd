@@ -28,7 +28,7 @@ ubiquitous presence and global symbolism, I examined McDonald's through
 cultural, nutritional, and economic lenses. The project unfolds in
 layers, starting globally and eventually narrowing down:
 
-1.   **Global Perspective (Where to Eat McDonald's):\
+1.  **Global Perspective (Where to Eat McDonald's):\
     **Utilizing **mcdonalds.R**, I crafted an interactive global map to
     showcase McDonald's widespread presence. This visual tool revealed
     the scale of the chain worldwide, highlighting regions with high
@@ -45,7 +45,7 @@ layers, starting globally and eventually narrowing down:
     economic analysis provided a practical guide to the affordability of
     McDonald's in different regions.
 
-    **3.	Individual Perspective (What to Order at McDonald's):**
+    **3. Individual Perspective (What to Order at McDonald's):**
 
     Using **McDCorrelation.R** and **McDNutrition.R,** I analysed the
     nutritional content of McDonald's menu items. This allowed users to
@@ -101,7 +101,7 @@ offers insights into product diversity and localization strategies.
 
 3.  [McDonald's Nutrition
     Facts](https://www.kaggle.com/datasets/mcdonalds/nutrition-facts)
-    (McDonald\'s, 2016)
+    (McDonald's, 2016)
 
 4.  [McDonald's
     Menu](https://github.com/schmwong/APAC-McDelivery-Menu-Logger)
@@ -195,23 +195,23 @@ stories and trends shaping our world.
 ## *References*
 
 Alliance for a Healthier Generation. (2013, September 26). *Alliance and
-McDonald\'s Announce Groundbreaking CGI Commitment to Promote Balanced
+McDonald's Announce Groundbreaking CGI Commitment to Promote Balanced
 Food and Beverage Choices* [Text].
 [https://www.healthiergeneration.org/articles/alliance-and-mcdonalds-announce-groundbreaking-cgi-commitment-to-promote-balanced-food](https://www.healthiergeneration.org/articles/alliance-and-mcdonalds-announce-groundbreaking-cgi-commitment-to-promote-balanced-food-and)
 
-Racoma, B. (2019, January 4). *McDonald\'s International Strategy:
+Racoma, B. (2019, January 4). *McDonald's International Strategy:
 Adapting Around the World*. Day Translations Blog.
 <https://www.daytranslations.com/blog/mcdonalds-international-strategy-adapting-around-the-world/>
 
 ## *Data Sources*
 
-Factle App. (2022, May 15). *Most McDonald\'s locations per country (as
+Factle App. (2022, May 15). *Most McDonald's locations per country (as
 of 2022)*. <https://openaxis.com/data/3740>
 
 Giatti, V. (2022). *Bigmac Prices*.
 <https://www.kaggle.com/datasets/vittoriogiatti/bigmacprice>
 
-McDonald\'s. (2016). *Nutrition Facts for McDonald\'s Menu*.
+McDonald's. (2016). *Nutrition Facts for McDonald's Menu*.
 <https://www.kaggle.com/datasets/mcdonalds/nutrition-facts>
 
 Wong, P. (2023). *McDelivery Menu Logger (APAC Region)* [Python].

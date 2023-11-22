@@ -16,6 +16,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Week 13: Final Submission
 
+Here is the final website!
+
+<https://kyraxwu.github.io/final.html>
+
 ## What is the theme of your data story?
 
 In this project, I delved into McDonald's global narrative, exploring

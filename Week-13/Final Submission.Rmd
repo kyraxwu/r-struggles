@@ -190,7 +190,9 @@ In summary, this project provided an enriching learning journey,
 applying various data science techniques to a real-world scenario. It
 offered valuable insights into a globally recognized brand, honing
 analytical skills, and expanding understanding of how data uncovers
-stories and trends shaping our world.
+stories and trends shaping our world. There are still many things I wish
+I could have implemented, but I will continue working on this because it
+has genuinely been quite interesting!
 
 ## *References*
 
@@ -218,7 +220,7 @@ Wong, P. (2023). *McDelivery Menu Logger (APAC Region)* [Python].
 <https://github.com/schmwong/APAC-McDelivery-Menu-Logger> (Original work
 published 2022)
 
-*1178 Words*
+*1198 Words*
 
 # Week 12
 

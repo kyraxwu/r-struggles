@@ -1,0 +1,13 @@
+name: BigMacPrice
+title: BigMacPrice
+username: kyrawu
+account: kyrawu
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10485077
+bundleId: 7926093
+url: https://kyrawu.shinyapps.io/BigMacPrice/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: APAC mcd menus.zip|mcdonalds data prep.Rmd|mcdonalds.R|most mcdonalds countries 2022 - Sheet1.csv|pffy-data-mcdonalds-nutrition-facts.xlsx|APAC mcd menus
